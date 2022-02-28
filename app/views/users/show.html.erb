@@ -8,4 +8,14 @@
         </h1>
       </section>
       </aside>
+
+      <div class="col-md-8">
+        <% if @user.portfolios.any? %>
+          <h3>portfolios (<%= @user.portfolios.count %>)</h3>
+          <ol class="portfolios">
+            <%= render @portfolios %>
+          </ol>
+          <%= will_paginate @portfolios %>
+        <% end %>
+      </div>
   </div>

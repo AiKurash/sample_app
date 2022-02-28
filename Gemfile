@@ -11,9 +11,13 @@ gem 'turbolinks', '5.2.1'
 gem 'jbuilder',   '2.10.0'
 gem 'bootsnap',   '1.7.2', require: false
 gem 'rails-controller-testing'
-
+gem 'rename'
+gem 'faker',       '2.11.0'
+gem 'will_paginate',           '3.3.0'
+gem 'bootstrap-will_paginate', '1.0.0'
 
 group :development, :test do
+  gem 'pg', '1.2.3'
   gem 'sqlite3', '1.4.2'
   gem 'byebug',  '11.1.3', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -26,6 +30,7 @@ group :development do
 end
 
 group :test do
+  gem 'pg', '1.2.3'
   gem 'capybara',           '3.35.3'
   gem 'selenium-webdriver'
   gem 'webdrivers'
